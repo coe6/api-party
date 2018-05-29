@@ -21,15 +21,30 @@ h3 {
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+.navLinks {
+  list-style: none;
+  padding-left: 0;
 }
 
-.App-intro {
-  font-size: large;
+.navLinks li {
+  display: inline-block;
+  padding: 0 15px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.navLinks a {
+  color: #02b1ff;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.navLinks a.active {
+  color: #F79824;
+}
+
+.navLinks a.active:hover {
+  color: #FDCA40;
+}
+
+.navLinks a:hover {
+  color: #0184be;
 }
