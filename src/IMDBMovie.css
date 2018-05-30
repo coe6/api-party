@@ -1,5 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers|Oswald');
+
 .IMDBMovie .poster {
     margin-top: 30px;
     width: 100%;
     max-width: 200px;
+}
+
+.IMDBMovie h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 30px;
+}
+
+.IMDBMovie h4 {
+    font-family: 'Oswald', sans-serif;
+}
+
+.IMDBMovie p {
+    font-family: 'Oswald', sans-serif;
 }

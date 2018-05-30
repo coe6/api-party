@@ -22,7 +22,7 @@ class IMDBMovie extends Component {
 
     fetchUserData = (props) => {
         const title = props.match.params.movie
-        const movieTitle = title.replace(/ +/g, "+")
+        let movieTitle = title.replace(/ +/g, "+")
 
         fetch(`http://www.omdbapi.com/?t=${movieTitle}&apikey=744c760f`)
             .then(response => response.json())
@@ -36,9 +36,11 @@ class IMDBMovie extends Component {
             <div className="IMDBMovie">
                 <img className="poster" src={movie.Poster} alt="" />
                 <h2>{movie.Title}, <em>{movie.Year}</em></h2>
-                <h4>{movie.Genre}, <em>Rated: {movie.Rated}</em></h4>
+                <h4>{movie.Genre}   //   <em>Rated: {movie.Rated}</em></h4>
                 <p>{movie.Plot}</p>
                 <h4>Rating: {movie.imdbRating}/10</h4>
+                <a href={movie.Website} target="_blank"><em>Link to website</em></a>
+                <p></p>
             </div>
         )
     }
