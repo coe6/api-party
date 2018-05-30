@@ -1,0 +1,49 @@
+import React, { Component } from 'react'
+import { Route } from 'react-router-dom'
+
+import './IMDB.css'
+import IMDBMovie from './IMDBMovie.js'
+
+class IMDB extends React.Component {
+    state = {
+        movie: '',
+    }
+
+    handleChange = (ev) => {
+        this.setState({ track: ev.target.value })
+    }
+
+    handleSubmit = (ev) => {
+        ev.preventDefault()
+        this.props.history.push(`/imdb/${this.state.movie}`)
+
+        this.setState({ movie: '' })
+    }
+
+    render() {
+        return (
+            <div className="IMDB">
+                <img className="logo"
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg"
+                    alt=""
+                />
+                <form onSubmit={this.handleSubmit}>
+                    <div>
+                        <input
+                            type="text"
+                            value={this.state.movie}
+                            onChange={this.handleChange}
+                        />
+                    </div>
+                    <div>
+                        <button type="submit">Search a track</button>
+                    </div>
+                </form>
+                <Route path="/IMDB/:movie" component={IMDBMovie}/>
+                <Route exact path="/IMDB" render={() => <h3>Please enter a movie to search on IMDB</h3>} />
+            </div>
+        )
+    }
+}
+
+export default IMDB
