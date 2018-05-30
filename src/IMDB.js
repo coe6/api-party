@@ -32,12 +32,13 @@ class IMDB extends React.Component {
                     <div>
                         <input 
                             type="text" 
+                            placeholder="Enter a movie title"
                             value={this.state.username}
                             onChange={this.handleChange}
                         />
                     </div>
                     <div>
-                        <button type="submit">Search a movie</button>
+                        <button type="submit">Search!</button>
                     </div>
                 </form>
                 <Route path="/IMDB/:movie" component={IMDBMovie}/>
