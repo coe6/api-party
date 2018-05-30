@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Route } from 'react-router-dom'
 
 import './IMDB.css'
@@ -10,7 +10,7 @@ class IMDB extends React.Component {
     }
 
     handleChange = (ev) => {
-        this.setState({ track: ev.target.value })
+        this.setState({ movie: ev.target.value })
     }
 
     handleSubmit = (ev) => {
@@ -27,16 +27,17 @@ class IMDB extends React.Component {
                     src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg"
                     alt=""
                 />
+                <p></p>
                 <form onSubmit={this.handleSubmit}>
                     <div>
-                        <input
-                            type="text"
-                            value={this.state.movie}
+                        <input 
+                            type="text" 
+                            value={this.state.username}
                             onChange={this.handleChange}
                         />
                     </div>
                     <div>
-                        <button type="submit">Search a track</button>
+                        <button type="submit">Search a movie</button>
                     </div>
                 </form>
                 <Route path="/IMDB/:movie" component={IMDBMovie}/>

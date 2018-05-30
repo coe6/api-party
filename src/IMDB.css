@@ -6,8 +6,8 @@
 
 .IMDB input {
     box-sizing: border-box;
-    width: 50%;
-    padding: 10px;
+    width: 40%;
+    padding: 5px;
     font-size: 24px;
     background-clip: padding-box;
     border-color: rgba(0,0,0,0.25);
@@ -19,8 +19,8 @@
   .IMDB button {
     color: white;
     margin-top: 10px;
-    width: 50%;
-    padding: 10px;
+    width: 40%;
+    padding: 5px;
     font-size: 24px;
     border-radius: 5px;
     border: 1px solid #01638f;
